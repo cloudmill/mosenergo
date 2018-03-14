@@ -1,0 +1,165 @@
+//
+// Partials -> Header
+// ------------------------------------
+
+//
+// Header
+//
+.page-header {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 11;
+
+    @media screen and (min-width: $screen-md-min) {
+        padding: 50px 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    &__logo {
+        position: relative;
+        a {
+            display: block;
+        }
+        .img {
+            display: none;
+        }
+        i {
+            font-size: 2px;
+            vertical-align: middle;
+        }
+        @media screen and (min-width: $screen-md-min) {
+            .img {
+                width: 260px;
+                height: 34px;
+                display: block;
+                background: url("../images/logo.png") no-repeat center;
+            }
+            i {
+                display: none;
+            }
+        }
+    }
+    &__lang {
+        font-size: 18px;
+        @extend .hidden__sm;
+        @extend .hidden__xs;
+        ul {
+            display: flex;
+            align-items: center;
+        }
+        a {
+            color: #2c2c2c;
+        }
+        .active {
+            color: #549bd6;
+            text-decoration: line-through;
+            span {
+                color: #b4b4b4;
+            }
+        }
+    }
+    &__search,
+    &__phone {
+        @extend .hidden__sm;
+        @extend .hidden__xs;
+    }
+    .fp-viewing-5thpage &,
+    .fp-viewing-3rdPage &,
+    .fp-viewing-firstPage &,
+    &--wh {
+        color: $white-lighten;
+        .page-header__lang .active,
+        .page-header__lang .active span,
+        i, a {
+            color: $white-lighten;
+        }
+        @media screen and (min-width: $screen-md-min) {
+            .img {
+                background: url("../images/logo-w.png") no-repeat center;
+            }
+        }
+        @media screen and (min-width: $screen-md) {
+            .overflow-trigger {
+                background: url(../images/icons/arrdown-w.png) no-repeat center right;
+            }
+            .main-nav__item--parent > a {
+                background: url(../images/icons/arrdown-w.png) no-repeat center right;
+            }
+        }
+    }
+}
+
+.mainsearch {
+    background-color: #5499d2;
+    padding: 30px 0;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    @include transition();
+    &.active {
+        top: 0;
+    }
+    .media-search {
+        margin: 0;
+        padding: 0;
+        margin-left: 17.2%;
+        @media screen and (min-width: $screen-xl) {
+            margin-left: 20%;
+            width: 72%;
+        }
+    }
+    &-close {
+        position: absolute;
+        left: 15px;
+        top: 30px;
+        width: 46px;
+        cursor: pointer;
+        @media screen and (min-width: $screen-md) {
+            left: 30px;
+        }
+        @media screen and (min-width: $screen-xl) {
+            left: auto;
+            right: 30px;
+        }
+    }
+}
+
+.sublogo {
+    text-transform: uppercase;
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    top: 130%;
+    left: 40px;
+    @media screen and (min-width: $screen-md) {
+        .fp-viewing-firstPage &,
+        .fp-viewing-secondPage &,
+        .fp-viewing-3rdPage &,
+        .fp-viewing-4thpage &,
+        .fp-viewing-5thpage & {
+            display: block;
+        }
+    }
+}
+
+//
+// Main title
+//
+.title {
+}
+
+//
+// old-browser
+//
+.browsehappy {
+    @extend .container;
+}
+
+.lt-ie8 {
+}

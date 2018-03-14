@@ -1,0 +1,295 @@
+//
+// Modules -> Navs
+// --------------------------------------------------
+
+.greedy {
+    position: relative;
+    display: flex;
+    @extend .middle__xs;
+    font-family: "ProximaBold", serif;
+    font-size: 17px;
+
+    width: 35px;
+    @media screen and (min-width: $screen-md) {
+        width: 50px;
+    }
+    @media screen and (min-width: $screen-lg) {
+        position: relative;
+        width: 45%;
+    }
+    @media screen and (min-width: $screen-xl-desktop) {
+        width: 900px;
+    }
+
+    &-links {
+        display: flex;
+        @extend .around__xs;
+        flex: 1;
+        li {
+            flex: none;
+            position: relative;
+        }
+    }
+}
+
+.overflow-trigger {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: -10px;
+    @media screen and (min-width: $screen-md) {
+        line-height: 42px;
+        margin-right: 0;
+        background: url('../images/icons/arrdown.png') no-repeat center right;
+    }
+    &.hidden {
+        display: none;
+    }
+}
+
+.overflow-main {
+    position: fixed;
+    padding-top: 70px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    overflow-y: auto;
+    background-color: #0763a2;
+    @media screen and (min-width: $screen-md) {
+        position: absolute;
+        background-color: transparent;
+        padding-top: 0;
+        left: auto;
+        right: -5px;
+        top: 90%;
+        bottom: auto;
+        display: block;
+        overflow-y: visible;
+    }
+    @media screen and (min-width: $screen-md) {
+        width: 200px;
+        text-align: right;
+    }
+    @media screen and (min-width: $screen-lg) {
+        width: 200%;
+    }
+    ul {
+        text-align: left;
+    }
+    &.hidden {
+        display: none;
+    }
+}
+
+.overflow-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    padding: 11px;
+    background-color: rgba($black-darken, 0.19);
+    @media screen and (min-width: $screen-md) {
+        display: none;
+    }
+}
+
+.overflow-mob {
+    color: $white-lighten;
+    padding: 20px 40px;
+    a, i {
+        color: $white-lighten;
+    }
+    .search {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+    .lang {
+        margin-left: -10px;
+        ul {
+            display: flex;
+            @extend .middle__xs;
+        }
+        .active {
+            text-decoration: line-through;
+        }
+    }
+    @media screen and (min-width: $screen-md) {
+        display: none;
+    }
+}
+
+.sub-nav {
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: 'ProximaSemi';
+    &.active {
+        display: block;
+    }
+    li {
+        display: block;
+        a:hover {
+            color: $white-lighten;
+            font-family: $base-font-family-bold;
+            background-color: #6085b5;
+        }
+    }
+    a {
+        color: $white-lighten;
+        font-size: 18px;
+        @media screen and (min-width: $screen-md) {
+            font-size: 17px;
+            padding: 12px 20px 12px 25px;
+            background-color: #6d98cf;
+        }
+    }
+
+    @if $use-adaptive == true {
+        @media screen and (min-width: $screen-adaptive-nav) {
+            position: absolute;
+            top: 100%;
+            left: 15px;
+            min-width: 280px;
+            display: none;
+            z-index: 9;
+            background-color: #6d98cf;
+            li:hover & {
+                display: block;
+            }
+        }
+    } @else {
+        display: none;
+        position: absolute;
+        background: $gray-darken;
+        top: 100%;
+        right: 0;
+        min-width: 200px;
+        li:hover & {
+            display: block;
+        }
+    }
+}
+
+.main-nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    color: #2c2c2c;
+    font-family: $base-font-family-bold;
+
+    &__item {
+        position: relative;
+        margin: 15px 0;
+        @if $use-adaptive == true {
+            display: block;
+            @media screen and (min-width: $screen-md) {
+                margin: 0;
+            }
+            @media screen and (min-width: $screen-lg) {
+                display: inline-block;
+            }
+        } @else {
+            display: inline-block;
+        }
+        &--parent {
+            @media screen and (min-width: $screen-md) {
+                > a {
+                    background: url('../images/icons/arrdown.png') no-repeat center right;
+                }
+                &:hover > a {
+                    color: #808080;
+                    background: url('../images/icons/arrup.png') no-repeat center right;
+                }
+            }
+        }
+    }
+    &__link {
+        position: relative;
+        padding: 5px 40px;
+        text-decoration: none;
+        display: block;
+        color: $white-lighten;
+        font-size: 28px;
+        line-height: 1.1;
+
+        @if $use-adaptive == true {
+            // background-color: #6085b5;
+            @media screen and (min-width: $screen-adaptive-nav) {
+                line-height: 1.3;
+                padding: 10px 10px;
+                background-color: transparent;
+                color: #2c2c2c;
+                font-size: 17px;
+            }
+        } @else {
+            background-color: transparent;
+        }
+        &:hover, &:focus {
+            color: $white-lighten;
+        }
+        @media screen and (min-width: $screen-adaptive-nav) {
+            &:hover, &:focus {
+                color: #808080;
+            }
+        }
+    }
+    img {
+        max-width: none;
+    }
+
+    @if $use-adaptive == true {
+        &__toggle {
+            position: relative;
+            margin-right: -15px;
+            padding: 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            color: $white-lighten;
+            font-size: 9px;
+            text-transform: uppercase;
+            font-family: $base-font-family-bold;
+            background-color: #0763a2;
+
+            &:focus {
+                outline: 0;
+            }
+            .icon-bar {
+                display: block;
+                width: 28px;
+                height: 2px;
+                background: #fff;
+                border-radius: 1px;
+                margin-bottom: 4px;
+            }
+            @media screen and (min-width: $screen-adaptive-nav) {
+                display: none;
+            }
+        }
+        &__collapse {
+            overflow-x: visible;
+            -webkit-overflow-scrolling: touch;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            display: none;
+
+            @media screen and (min-width: $screen-adaptive-nav) {
+                display: block !important;
+                width: auto;
+                box-shadow: none;
+                position: static;
+
+                &.collapse {
+                    display: block !important;
+                    height: auto !important;
+                    padding-bottom: 0;
+                    overflow: visible !important;
+                }
+
+            }
+        }
+    }
+}

@@ -995,6 +995,8 @@ a {
   a:hover, a:active, a:focus {
     color: #6085b5;
     text-decoration: none; }
+  a:not(.btn):visited {
+    color: #5c41aa; }
 
 img {
   max-width: 100%;
@@ -2316,6 +2318,11 @@ blockquote {
   display: flex;
   font-family: "ProximaBold", serif;
   font-size: 17px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   width: 35px; }
   @media screen and (min-width: 768px) {
     .greedy {
@@ -2323,7 +2330,7 @@ blockquote {
   @media screen and (min-width: 1025px) {
     .greedy {
       position: relative;
-      width: 45%; } }
+      width: 50%; } }
   @media screen and (min-width: 1860px) {
     .greedy {
       width: 900px; } }
@@ -2490,7 +2497,7 @@ blockquote {
     @media screen and (min-width: 768px) {
       .main-nav__link {
         line-height: 1.3;
-        padding: 10px 10px;
+        padding: 10px 15px;
         background-color: transparent;
         color: #2c2c2c;
         font-size: 17px; } }
@@ -3115,6 +3122,10 @@ aside {
     margin: 0;
     padding: 0;
     margin-left: 17.2%; }
+    @media screen and (min-width: 1025px) {
+      .mainsearch .media-search {
+        margin-left: 16%;
+        width: 79%; } }
     @media screen and (min-width: 1860px) {
       .mainsearch .media-search {
         margin-left: 20%;
@@ -3126,9 +3137,6 @@ aside {
     width: 46px;
     cursor: pointer; }
     @media screen and (min-width: 768px) {
-      .mainsearch-close {
-        left: 30px; } }
-    @media screen and (min-width: 1860px) {
       .mainsearch-close {
         left: auto;
         right: 30px; } }
@@ -3309,6 +3317,8 @@ i + span {
     .to-top {
       bottom: 60px;
       right: 60px; } }
+  .to-top i {
+    font-size: 30px; }
   .to-top:hover {
     -webkit-box-shadow: 0 0 16px rgba(109, 152, 207, 0.3);
        -moz-box-shadow: 0 0 16px rgba(109, 152, 207, 0.3);
@@ -4054,6 +4064,10 @@ i + span {
     .fullpage .swiper-buttonfl {
       right: 14%;
       bottom: 28%; } }
+  @media screen and (min-width: 1500px) {
+    .fullpage .swiper-buttonfl {
+      right: 12%;
+      bottom: 31%; } }
   @media screen and (min-width: 1860px) {
     .fullpage .swiper-buttonfl {
       right: 19%;
@@ -4242,7 +4256,8 @@ i + span {
   margin-top: 0; }
 
 .fullhistory-bottom {
-  margin-top: 30px; }
+  margin-top: 30px;
+  z-index: 9; }
   @media screen and (min-width: 768px) {
     .fullhistory-bottom {
       margin-top: -70px; } }
@@ -4293,6 +4308,10 @@ i + span {
   @media screen and (min-width: 768px) {
     .fullhistory-nexttxt {
       padding: 60px 30px; } }
+  @media screen and (min-width: 1500px) {
+    .fullhistory-nexttxt {
+      padding: 80px 30px 60px;
+      bottom: -32%; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
     .fullhistory-nexttxt {
       padding: 60px 30px 15px;
@@ -4303,6 +4322,7 @@ i + span {
     .fullhistory-nexttxt {
       font-size: 20px;
       padding: 100px 60px 60px;
+      bottom: -40%;
       max-width: 530px; } }
   .fullhistory-nexttxt b {
     color: #2c2c2c; }
@@ -4354,6 +4374,10 @@ i + span {
 
 .fullhistory .info-num-desc {
   color: #4f4f4f; }
+
+.fp-viewing-firstPage #fp-nav .arrowUp,
+.fp-viewing-5thpage #fp-nav .arrowDown {
+  opacity: 0; }
 
 #fp-nav ul li .fp-tooltip {
   width: 95px;
@@ -4434,6 +4458,41 @@ i + span {
   @media screen and (min-width: 768px) {
     #section4 {
       padding: 0; } }
+
+.fullpage-slider a,
+.fullpage-slider p,
+.fullpage-slider h1 {
+  opacity: 0;
+  -webkit-transform: translateY(-100px);
+     -moz-transform: translateY(-100px);
+      -ms-transform: translateY(-100px);
+       -o-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transition-delay: 0.5s;
+     -moz-transition-delay: 0.5s;
+       -o-transition-delay: 0.5s;
+          transition-delay: 0.5s; }
+
+.fullpage-slider a,
+.fullpage-slider p {
+  -webkit-transition-delay: 1s;
+     -moz-transition-delay: 1s;
+       -o-transition-delay: 1s;
+          transition-delay: 1s; }
+
+.fp-viewing-firstPage .fullpage-slider a,
+.fp-viewing-firstPage .fullpage-slider p,
+.fp-viewing-firstPage .fullpage-slider h1 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0); }
 
 .page404 {
   min-height: 550px;

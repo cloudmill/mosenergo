@@ -76,6 +76,9 @@ $(document).ready(function () {
                 check();
             }, 200);
         });
+        setTimeout(function () {
+            $('.greedy').css('opacity', '1');
+        }, 200);
         $btn.on('click', function () {
             $hlinks.toggleClass('hidden');
             if ($(window).width() < 768) {

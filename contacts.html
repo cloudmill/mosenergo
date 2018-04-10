@@ -56,6 +56,52 @@
         </form>
       </div>
     </div>
+    <div class="mfp-hide white-popup white-popup--md" id="form-id"><a class="popup-close popup-dismiss" href="#"><i class="is-icons is-icons--close"></i></a>
+      <div class="white-body relative">
+        <h3>Отправить резюме</h3>
+        <form method="post">
+          <div class="is-row">
+            <div class="is-col is-col__md-6 is-col__xs-12">
+              <div class="form__group">
+                <label>Ваше имя</label>
+                <input class="control" type="text" placeholder="Алексей" name="name">
+              </div>
+              <div class="form__group">
+                <label>Ваш номер телефона:</label>
+                <input class="control" type="text" placeholder="+7 (___)___-__-__" name="phone">
+              </div>
+              <div class="form__group">
+                <label>Ваша электронная почта:</label>
+                <input class="control" type="mail" placeholder="info@gmail.com" name="email">
+              </div>
+            </div>
+            <div class="is-col is-col__md-6 is-col__xs-12">
+              <div class="form__group">
+                <label>Ваша фамилия</label>
+                <input class="control" type="text" placeholder="Алексеев" name="surname">
+              </div>
+              <div class="form__group">
+                <label>Прикрепите резюме в формате doc или pdf</label>
+                <div class="dropzone dropzone-previews" id="my-awesome-dropzone"></div>
+              </div>
+            </div>
+            <div class="is-col is-col__md-8 is-col__xs-12">
+              <div class="form__group">
+                <div class="checkbox">
+                  <input type="checkbox" id="check2">
+                  <label for="check2">Выражаю свое согласие на обработку персональных данных в соответствие с полным текстом «Согласия»"</label>
+                </div>
+              </div>
+            </div>
+            <div class="is-col is-col__md-4 is-col__xs-12 text--right">
+              <div class="form__group">
+                <button class="btn btn--primary" type="submit">Отправить</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="mfp-hide white-popup" id="project-id"><a class="popup-close popup-dismiss" href="#"><i class="is-icons is-icons--close"></i></a>
       <div class="white-popup-body relative">
         <div class="arrows"><a class="arrows-prev" href="#"><i class="is-icons is-icons--left-w"></i><span>Предыдущий проект</span></a><a class="arrows-next" href="#"><span>Следующий проект&nbsp;</span><i class="is-icons is-icons--right-w"></i></a></div>
@@ -219,7 +265,7 @@
                     <div class="mb50"><b>105066, г. Москва, Спартаковская ул., д. 2а, стр. 1 </b></div>
                     <p>Тел.: <span class="text__xl">(499) 265-45-00 </span></p>
                     <p>Факс.: <span class="text__xl">(499) 265-33-15 </span></p>
-                    <p>E-mail: <a class="addpopup" href="#">tep@tep-m.ru</a></p>
+                    <p>E-mail: <a class="addpopup" href="#">tep@tep-m.ru</a></p><a class="popup-modal" href="#form-id">Отправить резюме</a>
                   </div>
                 </div>
               </div>

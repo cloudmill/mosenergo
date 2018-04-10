@@ -70,8 +70,8 @@ a {
     color: $link-hover-color;
     text-decoration: none;
   }
-  &:visited {
-      // color: #5c41aa;
+  &:not(.btn):visited {
+    color: #5c41aa;
   }
 }
 

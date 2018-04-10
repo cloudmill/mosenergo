@@ -88,6 +88,10 @@
             right: 14%;
             bottom: 28%;
         }
+        @media screen and (min-width: 1500px) {
+            right: 12%;
+            bottom: 31%;
+        }
         @media screen and (min-width: $screen-xl) {
             right: 19%;
             bottom: 26%;
@@ -293,6 +297,7 @@
     }
     &-bottom {
         margin-top: 30px;
+        z-index: 9;
         @media screen and (min-width: $screen-md) {
             margin-top: -70px;
         }
@@ -351,6 +356,10 @@
         @media screen and (min-width: $screen-md) {
             padding: 60px 30px;
         }
+        @media screen and (min-width: 1500px) {
+            padding: 80px 30px 60px;
+            bottom: -32%;
+        }
         @media screen and (min-width: $screen-md) and (max-width: 1023px) and (orientation: portrait) {
             padding: 60px 30px 15px;
             max-width: 300px;
@@ -360,6 +369,7 @@
         @media screen and (min-width: $screen-xl) {
             font-size: 20px;
             padding: 100px 60px 60px;
+            bottom: -40%;
             max-width: 530px;
         }
         b {
@@ -416,6 +426,10 @@
             color: #4f4f4f;
         }
     }
+}
+.fp-viewing-firstPage #fp-nav .arrowUp,
+.fp-viewing-5thpage #fp-nav .arrowDown {
+    opacity: 0;
 }
 #fp-nav ul li .fp-tooltip {
     width: 95px;
@@ -500,4 +514,23 @@
     @media screen and (min-width: $screen-md) {
         padding: 0;
     }
+}
+.fullpage-slider a,
+.fullpage-slider p,
+.fullpage-slider h1 {
+    opacity: 0;
+    transform: translateY(-100px);
+    @include transition();
+    transition-delay: 0.5s;
+}
+
+.fullpage-slider a,
+.fullpage-slider p {
+    transition-delay: 1s;
+}
+.fp-viewing-firstPage .fullpage-slider a,
+.fp-viewing-firstPage .fullpage-slider p,
+.fp-viewing-firstPage .fullpage-slider h1  {
+    opacity: 1;
+    transform: translateY(0);
 }

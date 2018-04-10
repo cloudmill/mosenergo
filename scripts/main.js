@@ -302,6 +302,48 @@ $(document).ready(function () {
     //fullpage
 });
 
+Dropzone.autoDiscover = false;
+jQuery(document).ready(function () {
+    $("#my-awesome-dropzone").dropzone({
+        url: "upload.php",
+        addRemoveLinks: true,
+        acceptedFiles: '.pdf,.doc,.docx',
+        createImageThumbnails: false,
+        chunkSize: false,
+        maxFiles: 1,
+        dictCancelUpload: 'Отменить загрузку',
+        dictRemoveFile: 'Удалить файл',
+        dictDefaultMessage: '<img src="images/plus.png" alt=""><div>Нажмите,  чтобы добавить файл</div>',
+        previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n  <div class=\"dz-image\"><img data-dz-thumbnail /></div>\n  <div class=\"dz-details\">\n    <div class=\"dz-size\"><span data-dz-size></span></div>\n    <div class=\"dz-filename\"><span data-dz-name></span></div>\n  </div>\n  <div class=\"dz-progress\" data-dz-uploadprogress data-progress=\"0\"><div class=\"circle\">\n<div class=\"mask full\">\n" + "\t\t\t<div class=\"fill\"></div>\n" + "\t\t</div>\n" + "\t\t<div class=\"mask half\">\n" + "\t\t\t<div class=\"fill\"></div>\n" + "\t\t\t<div class=\"fill fix\"></div>\n" + "\t\t</div>\n" + "\t</div>\n" + "\t<div class=\"inset\">\n" + "\t\t<div class=\"percentage\">\n" + "<span>66</span></div>\n" + "\t</div></div>\n  <div class=\"dz-error-message\"><span data-dz-errormessage></span></div>\n  <div class=\"dz-success-mark\">\n <img src='images/success.png', alt=''> Ваш файл успешно загружен\n  </div>\n  <div class=\"dz-error-mark\">\n<i class='icon-close'></i> Ваш файл не загружен\n  </div>\n</div>",
+        success: function success(file, response) {
+            file.previewElement.classList.add("dz-success");
+            // setTimeout(function () {
+            //     file.previewElement.classList.remove("dz-success");
+            // }, 2800)
+        },
+        uploadprogress: function uploadprogress(file, progress, bytesSent) {
+            file.previewElement.classList.add("dz-uploadprogress");
+            if (file.previewElement) {
+                var progressElement = file.previewElement.querySelector("[data-dz-uploadprogress]");
+                var result = Math.round(progress);
+                progressElement.setAttribute('data-progress', result + '');
+                progressElement.querySelector(".percentage span").innerHTML = result + "% <br><span>загружено</span>";
+                if (result == 100) {
+                    file.previewElement.classList.remove("dz-uploadprogress");
+                }
+            }
+        },
+        error: function error(file, response) {
+            file.previewElement.classList.add("dz-error");
+        },
+        complete: function complete(file, response) {
+            setTimeout(function () {
+                file.previewElement.classList.add("dz-complete");
+            }, 1000);
+        }
+    });
+});
+
 //calendar JS with moment.js
 moment.locale('ru');
 var field = document.getElementById('datepicker');

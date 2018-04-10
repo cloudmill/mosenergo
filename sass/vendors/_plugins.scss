@@ -639,13 +639,140 @@ $items:
 }
 .mttitle {
     margin-top: 50px;
-    @media screen and (min-width: $screen-md) {
+    @media screen and (min-width: $screen-md-min) {
         margin-top: 0;
     }
+}
+.progress-text {
+    color: #242424;
+    text-transform: uppercase;
+    font-size: 12px;
+    span {
+        font-size: 8px;
+    }
+}
+.dropzone {
+    border-radius: 3px;
+    border: 1px dashed #6d98cf;
+    background-color: #ffffff;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    &:hover {
+        background-color: #f6fafd;
+    }
+    .dz-message {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 0;
+        img {
+            margin-bottom: 10px;
+        }
+    }
+    .dz-preview {
+        margin: 0;
+        width: 100%;
+        min-height: auto;
+        .dz-remove {
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            &:before {
+                content: '';
+                background: url("../images/remove.png") no-repeat center;
+                height: 20px;
+                width: 20px;
+                vertical-align: bottom;
+                margin-right: 5px;
+                display: inline-block;
+            }
+        }
+        &.dz-file-preview .dz-image {
+            background: transparent;
+            border-radius: 0;
+            display: none !important;
+        }
+        .dz-details {
+            position: static;
+            padding: 0;
+            color: #242424;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+            .dz-filename span {
+                background: transparent;
+            }
+        }
+        .dz-progress {
+            margin: 0 auto;
+            text-align: center;
+            opacity: 0;
+            @include transition();
+            position: static;
+            height: 90px;
+        }
+        .dz-success-mark,
+        .dz-error-mark {
+            margin: 0;
+            position: static;
+            display: none;
+            opacity: 1;
+            text-align: center;
+            height: 30px;
+        }
+        &.dz-success .dz-success-mark {
+            animation: passing 2s cubic-bezier(0.77, 0, 0.175, 1);
+            animation-fill-mode: forwards;
+        }
+        &.dz-uploadprogress .dz-progress {
+            opacity: 1;
+        }
+        &.dz-complete .dz-remove,
+        &.dz-complete .dz-filename,
+        &.dz-success .dz-success-mark,
+        &.dz-error .dz-error-mark {
+            display: block;
+        }
+        .dz-remove,
+        .dz-filename,
+        &.dz-error .dz-details {
+            display: none;
+        }
+        &.dz-preview.dz-complete .dz-progress {
+            height: 0;
+            transition: all 0.3s ease-in;
+        }
+    }
+    .dz-size,
+    .dz-error-message {
+        display: none !important;
+    }
+}
+@keyframes passing {
+    0% {
+        opacity: 0;
+        transform: translateY(40px); }
+    30%, 70% {
+        opacity: 1;
+        height: 30px;
+        transform: translateY(0px); }
+    100% {
+        opacity: 0;
+        height: 0;
+        transform: translateY(-40px); }
 }
 .white-popup {
     color: #4b4b4b;
     background-color: #ffffff;
+    &--md {
+        max-width: 830px;
+        margin: auto;
+        padding: 60px;
+    }
     &-inner {
         text-align: left;
         padding: 15px 15px 50px;

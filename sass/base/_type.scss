@@ -189,7 +189,7 @@ b {
 
 .text__lg {
     // font-size: $font-size-large;
-    @media screen and (min-width: $screen-xl) {
+    @media screen and (min-width: $screen-lg) {
         font-size: $font-size-large;
     }
 }

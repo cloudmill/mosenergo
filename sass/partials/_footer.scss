@@ -38,10 +38,15 @@
     }
     &-menu {
         align-items: stretch;
-        ul {
+        > ul {
             font-size: 17px;
+            display: flex;
+            flex-wrap: wrap;
             @media screen and (min-width: $screen-xl-min) {
                 font-size: 19px;
+            }
+            > li {
+               @extend .is-col__md;
             }
             a {
                 color: $black;
@@ -52,8 +57,9 @@
             li {
                 margin-bottom: 26px;
             }
-            ul {
+            ul ul {
                 font-size: 14px;
+                margin-top: 23px;
                 @media screen and (min-width: $screen-xl-min) {
                     font-size: 16px;
                 }

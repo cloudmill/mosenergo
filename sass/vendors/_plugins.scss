@@ -61,6 +61,14 @@ $items:
 }
 //svg-icons
 
+.swiper-paginationf {
+    text-align: center;
+    width: 100%;
+}
+.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 8px;
+}
+
 //map styles
 .gm-style > div > div div div div > div:first-child {
    display: none;
@@ -585,6 +593,9 @@ $items:
     @media screen and (min-width: $screen-lg) {
         width: 63%;
     }
+    a {
+        color: $white-lighten !important;
+    }
     &-prev,
     &-next {
         color: $white-lighten;
@@ -804,7 +815,7 @@ $items:
             @media screen and (min-width: $screen-md) {
                 left: -50%;
             }
-            @media screen and (min-width: $screen-xl-min) {
+            @media screen and (min-width: $screen-lg) {
                 left: -37%;
             }
         }

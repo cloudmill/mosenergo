@@ -33,13 +33,18 @@
         }
         @media screen and (min-width: $screen-md-min) {
             .img {
-                width: 260px;
+                width: 200px;
                 height: 34px;
                 display: block;
-                background: url("../images/logo.png") no-repeat center;
+                background: url("../images/logo.png") no-repeat center / 100% auto;
             }
             i {
                 display: none;
+            }
+        }
+        @media screen and (min-width: $screen-xl) {
+            .img {
+                width: 260px;
             }
         }
     }
@@ -50,6 +55,7 @@
         ul {
             display: flex;
             align-items: center;
+            @extend .end__xs;
         }
         a {
             color: #2c2c2c;

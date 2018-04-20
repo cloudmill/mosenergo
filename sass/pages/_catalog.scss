@@ -96,12 +96,18 @@
     }
 }
 
+.tumb {
+    .swiper-slide {
+        height: 340px;
+    }
+}
+
 .catalog {
     display: flex;
     flex-wrap: wrap;
     &__item {
         position: relative;
-        color: $white-lighten;
+        color: $white-lighten !important;
         margin-bottom: 10px;
         @media screen and (min-width: $screen-md) {
             margin-bottom: 0;
@@ -407,6 +413,9 @@
                 font-size: 18px;
             }
             @media screen and (min-width: $screen-lg) {
+                font-size: 17px;
+            }
+            @media screen and (min-width: 1300px) {
                 font-size: 22px;
             }
             @media screen and (min-width: $screen-xl) {

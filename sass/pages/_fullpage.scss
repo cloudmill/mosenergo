@@ -27,7 +27,10 @@
 
 .fullpage {
     .swiper-slide {
-        padding: 0 5px;
+        //padding: 0 5px;
+        &--lg {
+            width: 100%;
+        }
     }
     .swiper-buttonfl,
     .swiper-button {
@@ -147,7 +150,7 @@
         }
     }
     .linkto {
-        color: #2c2c2c;
+        color: #2c2c2c !important;
         font-family: $base-font-family-bold;
         font-size: 20px;
         display: block;
@@ -161,7 +164,7 @@
             text-align: left;
         }
         &--w {
-            color: $white-lighten;
+            color: $white-lighten !important;
         }
         img,
         span {

@@ -227,7 +227,6 @@
             font-family: $base-font-family;
             color: #4f4f4f;
             line-height: 1.1;
-            margin-top: 0;
             @media screen and (min-width: $screen-md) {
               font-size: 19px;
             }
@@ -342,7 +341,7 @@
       .text__lg {
         line-height: 2;
         font-size: 11px;
-        @media screen and (min-width: $screen-xl) {
+        @media screen and (min-width: $screen-lg) {
           font-size: 18px;
         }
       }

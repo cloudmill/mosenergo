@@ -4491,7 +4491,7 @@ aside {
         width: 200px;
         height: 34px;
         display: block;
-        background: url("../images/logo.png") no-repeat center/100% auto; }
+        background: url("../images/logo.png") no-repeat center / 100% auto; }
       .page-header__logo i {
         display: none; } }
     @media screen and (min-width: 1860px) {
@@ -4539,7 +4539,7 @@ aside {
       .fp-viewing-5thpage .page-header .img,
       .fp-viewing-3rdPage .page-header .img,
       .fp-viewing-firstPage .page-header .img, .page-header--wh .img {
-        background: url("../images/logo-w.png") no-repeat center; } }
+        background: url("../images/logo-w.png") no-repeat center / 100% auto; } }
     @media screen and (min-width: 768px) {
       .fp-viewing-5thpage .page-header .overflow-trigger,
       .fp-viewing-3rdPage .page-header .overflow-trigger,

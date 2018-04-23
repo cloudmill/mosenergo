@@ -12,7 +12,7 @@
     @include transition();
 
     width: 35px;
-    @media screen and (min-width: $screen-md) {
+    @media screen and (min-width: 1023px) {
         width: 430px;
     }
     @media screen and (min-width: $screen-lg) {

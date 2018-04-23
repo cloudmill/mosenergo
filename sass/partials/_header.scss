@@ -73,6 +73,14 @@
         @extend .hidden__sm;
         @extend .hidden__xs;
     }
+    &__phone {
+        @media screen and (min-width: $screen-lg) {
+            margin-top: -28px;
+        }
+        @media screen and (min-width: $screen-xl) {
+            margin-top: 0;
+        }
+    }
     .fp-viewing-5thpage &,
     .fp-viewing-3rdPage &,
     .fp-viewing-firstPage &,
@@ -85,7 +93,7 @@
         }
         @media screen and (min-width: $screen-md-min) {
             .img {
-                background: url("../images/logo-w.png") no-repeat center;
+                background: url("../images/logo-w.png") no-repeat center / 100% auto;
             }
         }
         @media screen and (min-width: $screen-md) {

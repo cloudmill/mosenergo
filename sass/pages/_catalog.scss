@@ -54,7 +54,7 @@
             display: flex;
             flex-wrap: wrap;
             &--f {
-                @extend .is-col__md-6;
+                @extend .is-col__lg-6;
                 @extend .is-col__xs-12;
             }
         }
@@ -98,7 +98,13 @@
 
 .tumb {
     .swiper-slide {
-        height: 340px;
+        height: 230px;
+        @media screen and (min-width: $screen-lg) {
+            height: 260px;
+        }
+        @media screen and (min-width: $screen-xl) {
+            height: 340px;
+        }
     }
 }
 
@@ -109,6 +115,7 @@
         position: relative;
         color: $white-lighten !important;
         margin-bottom: 10px;
+        overflow: hidden;
         @media screen and (min-width: $screen-md) {
             margin-bottom: 0;
             padding: 5px;
@@ -163,6 +170,12 @@
             position: relative;
             height: 100%;
             text-align: center;
+            @media screen and (min-width: $screen-md) {
+                max-height: 300px;
+            }
+            @media screen and (min-width: $screen-lg) {
+                max-height: inherit;
+            }
             @media screen and (min-width: $screen-xl) {
                 min-height: 330px;
             }
@@ -170,7 +183,7 @@
                 @include transition();
                 width: 100%;
                 object-fit: cover;
-                @media screen and (min-width: $screen-md) {
+                @media screen and (min-width: $screen-lg) {
                     min-height: 100%;
                     width: auto;
                 }

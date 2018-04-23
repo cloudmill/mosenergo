@@ -489,7 +489,7 @@
     }
 
     @media screen and (min-width: 1367px) and (max-width: $screen-lg-max) {
-        background: url("../images/section-2-1.png") left -37px top 58px / cover;
+        background: url("../images/section-2-1.png")  no-repeat left -37px top 58px / cover;
     }
 }
 
@@ -518,22 +518,22 @@
         padding: 0;
     }
 }
-.fullpage-slider a,
-.fullpage-slider p,
-.fullpage-slider h1 {
+.fullpage-slider .swiper-slide-active a,
+.fullpage-slider .swiper-slide-active p,
+.fullpage-slider .swiper-slide-active h1 {
     opacity: 0;
     transform: translateY(-100px);
     @include transition();
     transition-delay: 0.5s;
 }
 
-.fullpage-slider a,
-.fullpage-slider p {
+.fullpage-slider .swiper-slide-active a,
+.fullpage-slider .swiper-slide-active p {
     transition-delay: 1s;
 }
-.fp-viewing-firstPage .fullpage-slider a,
-.fp-viewing-firstPage .fullpage-slider p,
-.fp-viewing-firstPage .fullpage-slider h1  {
+.fp-viewing-firstPage .fullpage-slider .swiper-slide-active a,
+.fp-viewing-firstPage .fullpage-slider .swiper-slide-active p,
+.fp-viewing-firstPage .fullpage-slider .swiper-slide-active h1  {
     opacity: 1;
     transform: translateY(0);
 }

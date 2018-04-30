@@ -15,6 +15,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+main,section,nav {
+  display: block;
+}
 
 //
 // Delete focus border

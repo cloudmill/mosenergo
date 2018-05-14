@@ -339,10 +339,12 @@
                 width: 38%;
             }
             @media screen and (min-width: $screen-lg) {
-                width: 39%;
+                width: 38%;
+                margin-right: 2%;
             }
             @media screen and (min-width: $screen-xl) {
                 width: 41.5%;
+                margin-right: 0;
             }
         }
     }

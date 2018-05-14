@@ -101,14 +101,16 @@
                 position: absolute;
                 left: 10px;
                 top: 15px;
+                line-height: 1.4;
             }
-            @media screen and (min-width: $screen-lg) {
+            @media screen and (min-width: 1400px) {
                 left: 40px;
                 top: 30px;
             }
             @media screen and (min-width: $screen-xl) {
                 left: 75px;
                 top: 80px;
+                line-height: 1.8;
             }
         }
     }

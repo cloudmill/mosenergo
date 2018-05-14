@@ -228,7 +228,7 @@ $(document).ready(function () {
     });
     var swiperPop = new Swiper('.swiper-pop', {
         slidesPerView: 1,
-        loop: false,
+        loop: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true

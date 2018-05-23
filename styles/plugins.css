@@ -377,7 +377,7 @@ img.mfp-img {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.swiper-wrapper {
+.swiper-container .swiper-wrapper {
   position: relative;
   width: 100%;
   height: 100%;

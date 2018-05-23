@@ -17,6 +17,17 @@
   }
 }
 
+@mixin ie-only() {
+  /* IE10+ CSS styles go here */
+  @media all and (-ms-high-contrast: none), (-ms-hight-contrst: active) {
+    @content;
+  }
+  /* IE9 < */
+  @media screen\0 {
+    @content;
+  }
+}
+
 
 //
 // center-block

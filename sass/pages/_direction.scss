@@ -9,6 +9,18 @@
     @extend .middle__xs;
     position: relative;
 }
+//@media screen and (min-width: $screen-md) {
+    @include ie-only{
+        _:-ms-fullscreen, :root .banner {
+            height: 100vh;
+        }
+        _:-ms-fullscreen, :root .catalog__item-img img {
+            width: 100%;
+        }
+
+    }
+//}
+
 .scrollto {
     position: absolute;
     bottom: 20px;

@@ -68,20 +68,23 @@ $(document).ready(function () {
             } else $btn.removeClass('hidden');
         }
 
-        // var screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-        // if (screen_width <= 1365) {
-        // }
         $(window).resize(function () {
-            setTimeout(function () {
-                check();
-            }, 200);
+            if (window.outerWidth <= 1365) {
+                setTimeout(function () {
+                    check();
+                }, 200);
+            }
         });
         $(window).on("orientationchange", function () {
-            setTimeout(function () {
-                check();
-            }, 500);
+            if (window.outerWidth <= 1365) {
+                setTimeout(function () {
+                    check();
+                }, 500);
+            }
         });
-        check();
+        if (window.outerWidth <= 1365) {
+            check();
+        }
         setTimeout(function () {
             $('.greedy').css('opacity', '1');
         }, 200);

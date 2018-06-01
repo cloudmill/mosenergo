@@ -298,16 +298,21 @@ $(document).ready(function () {
             }
         }
     });
-    $('.popup-gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Загрузка изображения #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-        }
+    $('.popup-gallery').on('click', function () {
+        $(this).find('.gallery').magnificPopup('open');
+    });
+    $('.gallery').each(function () {
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Загрузка изображения #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            }
+        });
     });
     $(document).on('click', '.popup-dismiss', function (e) {
         e.preventDefault();

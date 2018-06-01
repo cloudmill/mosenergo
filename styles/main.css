@@ -5361,7 +5361,6 @@ i + span {
   @media screen and (min-width: 1860px) {
     .direction-sub {
       padding-top: 90px;
-      padding-bottom: 90px;
       background: url("../images/back.png") no-repeat top -3% right -63%; } }
   .direction-sub h5 {
     font-family: 'ProximaSemi'; }
@@ -6301,6 +6300,9 @@ i + span {
     font-size: 11px; }
     @media screen and (min-width: 1025px) {
       .info-load .text__lg {
+        font-size: 14px; } }
+    @media screen and (min-width: 1860px) {
+      .info-load .text__lg {
         font-size: 18px; } }
   .info-load .button {
     background-color: #f0f0f0;
@@ -6872,6 +6874,10 @@ div.hr-main__item {
       margin-bottom: 0;
       padding: 40px 37px;
       height: 380px; } }
+  .sert-main__item a {
+    color: #121212; }
+    .sert-main__item a:hover, .sert-main__item a:active, .sert-main__item a:focus {
+      color: #6085b5; }
   .sert-main__item--img {
     height: auto; }
   .sert-main__item-img {

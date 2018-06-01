@@ -153,6 +153,14 @@
             padding: 40px 37px;
             height: 380px;
         }
+        a {
+            color: #121212;
+            &:hover,
+            &:active,
+            &:focus {
+                color: $link-hover-color;
+            }
+        }
         &--img {
             height: auto;
         }

@@ -6875,7 +6875,8 @@ div.hr-main__item {
       padding: 40px 37px;
       height: 380px; } }
   .sert-main__item a {
-    color: #121212; }
+    color: #121212;
+    display: block; }
     .sert-main__item a:hover, .sert-main__item a:active, .sert-main__item a:focus {
       color: #6085b5; }
   .sert-main__item--img {

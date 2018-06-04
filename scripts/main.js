@@ -229,16 +229,17 @@ $(document).ready(function () {
             prevEl: '.swiper-buttonfl-prev'
         }
     });
-    var swiperPop = new Swiper('.swiper-pop', {
+    var swiperDir = new Swiper('.swiper-dir', {
         slidesPerView: 1,
         loop: true,
+        spaceBetween: 20,
         pagination: {
-            el: '.swiper-pagination',
-            clickable: true
+            el: '.swiper-paginationdir',
+            type: 'fraction'
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+            nextEl: '.swiper-buttondir-next',
+            prevEl: '.swiper-buttondir-prev'
         }
     });
     // var swiperFull = new Swiper('.swiper-full', {
@@ -251,7 +252,15 @@ $(document).ready(function () {
     //     }
     // });
     var galleryTop = new Swiper('.artk', {
-        slidesPerView: 1
+        slidesPerView: 1,
+        pagination: {
+            el: '.swiper-paginationfl',
+            type: 'fraction'
+        },
+        navigation: {
+            nextEl: '.swiper-buttonfl-next',
+            prevEl: '.swiper-buttonfl-prev'
+        }
     });
     var galleryThumbs = new Swiper('.tumb', {
         spaceBetween: 5,
@@ -296,7 +305,18 @@ $(document).ready(function () {
             },
             change: function change() {
                 setTimeout(function () {
-                    swiperPop.update();
+                    var swiperPop = new Swiper('.swiper-pop', {
+                        slidesPerView: 1,
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev'
+                        }
+                    });
                 }, 100);
             }
         }
@@ -329,13 +349,14 @@ $(document).ready(function () {
         navigation: true,
         // autoScrolling: false,
         navigationPosition: 'left',
-        responsiveWidth: 1025,
+        // responsiveWidth: 1025,
         navigationTooltips: ['Главная', 'История', 'Направления деятельности', 'Новости', 'Партнеры'],
         afterRender: function afterRender() {
             $('#fp-nav').append('<span class="arrow arrowUp"></span><span class="arrow arrowDown"></span>');
             setTimeout(function () {
                 swiperNw.update();
                 swiperFl.update();
+                swiperDir.update();
                 galleryTop.update();
                 galleryThumbs.update();
                 // swiperFull.update();

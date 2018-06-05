@@ -3746,10 +3746,10 @@ blockquote {
   font-family: "ProximaBold", serif;
   font-size: 17px;
   opacity: 0;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   width: 35px; }
   @media screen and (min-width: 1023px) {
     .greedy {

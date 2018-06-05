@@ -33,6 +33,13 @@ $(document).ready(function () {
     });
     //tabs
 
+    //flexmenu
+    // $('.flexmenu').flexMenu({
+    //     linkText: 'Еще',
+    //     popupClass: 'main-nav__item'
+    // });
+    //flexmenu
+
     //greedymenu
     $(function () {
         // var $nav = $('.greedy');

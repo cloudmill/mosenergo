@@ -3441,7 +3441,7 @@ blockquote {
     width: 33.33333%; }
   .is-col__md-5, .fullhistory .info-num {
     width: 41.66667%; }
-  .is-col__md-6, .directions-catalog-inner--f, .info-num, .hr-main__item, .press__item, .contacts-main__item, .sert-main__item {
+  .is-col__md-6, .media-catalog-inner--f, .directions-catalog-inner--f, .info-num, .hr-main__item, .press__item, .contacts-main__item, .sert-main__item {
     width: 50%; }
   .is-col__md-7 {
     width: 58.33333%; }
@@ -3541,7 +3541,7 @@ blockquote {
     width: 33.33333%; }
   .is-col__lg-5 {
     width: 41.66667%; }
-  .is-col__lg-6, .media-catalog-inner--f {
+  .is-col__lg-6 {
     width: 50%; }
   .is-col__lg-7 {
     width: 58.33333%; }
@@ -3897,6 +3897,7 @@ blockquote {
   .main-nav__item {
     position: relative;
     margin: 15px 0;
+    float: left;
     display: block; }
     @media screen and (min-width: 768px) {
       .main-nav__item {
@@ -4918,6 +4919,12 @@ i + span {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
+    .media-catalog-inner--f.fullhistory-slider {
+      padding-bottom: 0; }
+      .media-catalog-inner--f.fullhistory-slider .catalog__item-img {
+        max-height: inherit; }
+        .media-catalog-inner--f.fullhistory-slider .catalog__item-img img {
+          height: 100%; }
 
 .media-search {
   position: relative;
@@ -5596,13 +5603,18 @@ i + span {
   @media screen and (min-width: 1025px) {
     .fullpage .swiper-buttondir,
     .fullpage .swiper-buttonfl {
+      right: 16%;
+      bottom: 40%; } }
+  @media screen and (min-width: 1300px) {
+    .fullpage .swiper-buttondir,
+    .fullpage .swiper-buttonfl {
       right: 14%;
       bottom: 28%; } }
   @media screen and (min-width: 1500px) {
     .fullpage .swiper-buttondir,
     .fullpage .swiper-buttonfl {
       right: 12%;
-      bottom: 51%; } }
+      bottom: 26%; } }
   @media screen and (min-width: 1860px) {
     .fullpage .swiper-buttondir,
     .fullpage .swiper-buttonfl {
@@ -5765,9 +5777,9 @@ i + span {
       .directs__item {
         padding: 15px;
         margin: 5px;
-        width: -webkit-calc(25% - 10px);
-        width: -moz-calc(25% - 10px);
-        width: calc(25% - 10px);
+        width: -webkit-calc(20% - 10px);
+        width: -moz-calc(20% - 10px);
+        width: calc(20% - 10px);
         height: 36.3vh;
         max-height: 250px; } }
     @media screen and (min-width: 1025px) {
@@ -5850,6 +5862,12 @@ i + span {
 
 .fullhistory-slider {
   line-height: 1.8; }
+  @media screen and (min-width: 768px) {
+    .fullhistory-slider {
+      padding-bottom: 40px; } }
+  @media screen and (min-width: 1860px) {
+    .fullhistory-slider {
+      padding-bottom: 70px; } }
   .fullhistory-slider .swiper-paginationdir,
   .fullhistory-slider .swiper-paginationfl {
     font-size: 31px;
@@ -5906,16 +5924,17 @@ i + span {
       position: absolute;
       right: 0;
       padding: 30px 15px;
-      bottom: -40%;
+      bottom: -38%;
       font-size: 18px;
       line-height: 1.5; } }
   @media screen and (min-width: 768px) {
     .fullhistory-nexttxt {
-      padding: 60px 30px; } }
+      padding: 60px 30px;
+      bottom: -34%; } }
   @media screen and (min-width: 1500px) {
     .fullhistory-nexttxt {
       padding: 80px 30px 60px;
-      bottom: -32%; } }
+      bottom: -28%; } }
   @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
     .fullhistory-nexttxt {
       padding: 60px 30px 15px;
@@ -5963,7 +5982,7 @@ i + span {
 .fullhistory .info-nums {
   margin-top: 30px;
   margin-bottom: 0; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     .fullhistory .info-nums {
       margin-top: 77px; } }
   @media screen and (min-width: 1367px) and (max-width: 1859px) {
@@ -6110,6 +6129,13 @@ i + span {
       -ms-transform: translateY(0);
        -o-transform: translateY(0);
           transform: translateY(0); }
+
+.fullhistory .more {
+  font-size: 14px;
+  line-height: 1; }
+  @media screen and (min-width: 480px) {
+    .fullhistory .more {
+      font-size: 35px; } }
 
 .page404 {
   min-height: 550px;

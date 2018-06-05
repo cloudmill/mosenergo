@@ -1943,7 +1943,13 @@
   display: flex; }
   @media screen and (min-width: 768px) {
     .arrows {
-      position: absolute; } }
+      position: absolute;
+      width: 50%; } }
+  @media screen and (min-width: 1025px) {
+    .arrows {
+      width: 63%; } }
+  .arrows--long {
+    width: 100% !important; }
   .arrows a {
     color: #fff !important; }
   .arrows-prev, .arrows-next {

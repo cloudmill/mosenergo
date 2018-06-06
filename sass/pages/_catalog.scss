@@ -49,12 +49,18 @@
         margin: 0 -5px;
     }
     &-catalog {
-        margin: -5px;
+        //margin: -5px;
+        @media screen and (min-width: $screen-md) {
+            flex-wrap: nowrap !important;
+        }
         &-inner {
             display: flex;
             flex-wrap: wrap;
+            .catalog__item {
+                margin-bottom: 0;
+            }
             &--f {
-                @extend .is-col__md-6;
+                //@extend .is-col__md-6;
                 @extend .is-col__xs-12;
                 &.fullhistory-slider {
                     @media screen and (min-width: $screen-md) {
@@ -131,15 +137,23 @@
             margin-bottom: 0;
             padding: 5px;
         }
+        .catalog__item-img {
+            &::before {
+                content: '';
+                z-index: 9;
+                position: absolute;
+                top: 0;left: 0;right: 0;bottom: 0;
+                background: rgba(0, 0, 0, 0.25);
+                @media screen and (min-width: $screen-xl) {
+                    background: rgba(0, 0, 0, 0.25);
+                }
+            }
+        }
         &:focus,
         &:hover {
             color: $white-lighten;
             .catalog__item-img {
                 &::before {
-                    content: '';
-                    z-index: 9;
-                    position: absolute;
-                    top: 0;left: 0;right: 0;bottom: 0;
                     background: url('../images/plus-wh.svg') no-repeat center / auto 50%, rgba(0, 0, 0, 0.25);
                     @media screen and (min-width: $screen-xl) {
                         background: url('../images/plus-wh.svg') no-repeat center, rgba(0, 0, 0, 0.25);
@@ -153,6 +167,9 @@
         h6 {
             margin: 0;
             line-height: 1.1;
+            @media screen and (max-width: $screen-md-max) {
+                font-size: 14px;
+            }
             @media screen and (min-width: $screen-xl) {
                 line-height: 1.4;
             }
@@ -183,12 +200,26 @@
             text-align: center;
             @media screen and (min-width: $screen-md) {
                 max-height: 300px;
+                height: 150px;
             }
             @media screen and (min-width: $screen-lg) {
                 max-height: inherit;
+                height: 230px;
             }
             @media screen and (min-width: $screen-xl) {
-                min-height: 330px;
+                height: 330px;
+            }
+            .media-catalog-inner--2h & {
+                @media screen and (min-width: $screen-md) {
+                    height: 310px;
+                    max-height: inherit !important;
+                }
+                @media screen and (min-width: $screen-lg) {
+                    height: 470px;
+                }
+                @media screen and (min-width: $screen-xl) {
+                    height: 670px;
+                }
             }
             img {
                 @include transition();

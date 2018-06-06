@@ -189,6 +189,21 @@ $(document).ready(function () {
             }
         }
     });
+    var swiperFull = new Swiper('.swiper-full', {
+        slidesPerView: 2,
+        // centeredSlides: true,
+        // spaceBetween: 10,
+        loop: true,
+        pagination: {
+            el: '.swiper-paginationf',
+            clickable: true
+        },
+        breakpoints: {
+            767: {
+                slidesPerView: 1
+            }
+        }
+    });
     var swiperSl = new Swiper('.swiper-sl', {
         slidesPerView: 3,
         // spaceBetween: 2,
@@ -243,29 +258,29 @@ $(document).ready(function () {
             prevEl: '.swiper-buttondir-prev'
         }
     });
-    var galleryTop = new Swiper('.artk', {
-        slidesPerView: 1,
-        pagination: {
-            el: '.swiper-paginationfl',
-            type: 'fraction'
-        },
-        navigation: {
-            nextEl: '.swiper-buttonfl-next',
-            prevEl: '.swiper-buttonfl-prev'
-        }
-    });
-    var galleryThumbs = new Swiper('.tumb', {
-        spaceBetween: 5,
-        slidesPerView: 2,
-        slidesPerColumn: 2,
-        touchRatio: 0.2,
-        // slideToClickedSlide: true,
-        // allowTouchMove: false,
-        pagination: {
-            el: '.swiper-paginationf',
-            clickable: true
-        }
-    });
+    // var galleryTop = new Swiper('.artk', {
+    //     slidesPerView: 1,
+    //     pagination: {
+    //         el: '.swiper-paginationfl',
+    //         type: 'fraction',
+    //     },
+    //     navigation: {
+    //         nextEl: '.swiper-buttonfl-next',
+    //         prevEl: '.swiper-buttonfl-prev',
+    //     }
+    // });
+    // var galleryThumbs = new Swiper('.tumb', {
+    //     spaceBetween: 5,
+    //     slidesPerView: 2,
+    //     slidesPerColumn: 2,
+    //     touchRatio: 0.2,
+    //     // slideToClickedSlide: true,
+    //     // allowTouchMove: false,
+    //     pagination: {
+    //         el: '.swiper-paginationf',
+    //         clickable: true
+    //     }
+    // });
     // galleryTop.controller.control = galleryThumbs;
     // galleryThumbs.controller.control = galleryTop;
     $('.tumb .swiper-slide').click(function () {
@@ -349,8 +364,9 @@ $(document).ready(function () {
                 swiperNw.update();
                 swiperFl.update();
                 swiperDir.update();
-                galleryTop.update();
-                galleryThumbs.update();
+                // galleryTop.update();
+                // galleryThumbs.update();
+                swiperFull.update();
             }, 100);
         }
     });
@@ -361,6 +377,23 @@ $(document).ready(function () {
         $.fn.fullpage.reBuild();
     });
     //fullpage
+
+    $(window).resize(function () {
+        setTimeout(function () {
+            swiperNw.update();
+            swiperFl.update();
+            swiperDir.update();
+            swiperFull.update();
+        }, 500);
+    });
+    $(window).on("orientationchange", function () {
+        setTimeout(function () {
+            swiperNw.update();
+            swiperFl.update();
+            swiperDir.update();
+            swiperFull.update();
+        }, 500);
+    });
 });
 
 Dropzone.autoDiscover = false;

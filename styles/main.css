@@ -5038,16 +5038,21 @@ i + span {
       .catalog__item {
         margin-bottom: 0;
         padding: 5px; } }
+    .catalog__item .catalog__item-img::before {
+      content: '';
+      z-index: 9;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.25); }
+      @media screen and (min-width: 1860px) {
+        .catalog__item .catalog__item-img::before {
+          background: rgba(0, 0, 0, 0.25); } }
     .catalog__item:focus, .catalog__item:hover {
       color: #fff; }
       .catalog__item:focus .catalog__item-img::before, .catalog__item:hover .catalog__item-img::before {
-        content: '';
-        z-index: 9;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         background: url("../images/plus-wh.svg") no-repeat center/auto 50%, rgba(0, 0, 0, 0.25); }
         @media screen and (min-width: 1860px) {
           .catalog__item:focus .catalog__item-img::before, .catalog__item:hover .catalog__item-img::before {

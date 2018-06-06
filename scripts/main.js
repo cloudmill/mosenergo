@@ -192,7 +192,7 @@ $(document).ready(function () {
     var swiperSl = new Swiper('.swiper-sl', {
         slidesPerView: 3,
         // spaceBetween: 2,
-        loop: true,
+        // loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'

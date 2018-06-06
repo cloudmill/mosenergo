@@ -33,16 +33,8 @@ $(document).ready(function () {
     });
     //tabs
 
-    //flexmenu
-    // $('.flexmenu').flexMenu({
-    //     linkText: 'Еще',
-    //     popupClass: 'main-nav__item'
-    // });
-    //flexmenu
-
     //greedymenu
     $(function () {
-        // var $nav = $('.greedy');
         var $btn = $('.overflow-trigger');
         var $vlinks = $('.greedy-links');
         var $hlinks = $('.overflow-main');
@@ -90,7 +82,9 @@ $(document).ready(function () {
             }
         });
         if (window.outerWidth <= 1365) {
-            check();
+            setTimeout(function () {
+                check();
+            }, 500);
         }
         setTimeout(function () {
             $('.greedy').css('opacity', '1');
@@ -249,15 +243,6 @@ $(document).ready(function () {
             prevEl: '.swiper-buttondir-prev'
         }
     });
-    // var swiperFull = new Swiper('.swiper-full', {
-    //     slidesPerView: 1,
-    //     centeredSlides: true,
-    //     spaceBetween: 10,
-    //     pagination: {
-    //         el: '.swiper-paginationf',
-    //         clickable: true
-    //     }
-    // });
     var galleryTop = new Swiper('.artk', {
         slidesPerView: 1,
         pagination: {
@@ -366,7 +351,6 @@ $(document).ready(function () {
                 swiperDir.update();
                 galleryTop.update();
                 galleryThumbs.update();
-                // swiperFull.update();
             }, 100);
         }
     });

@@ -1,0 +1,75 @@
+{
+  "name": "Case__fly",
+  "version": "2.0.0",
+  "description": "Framework Case__fly",
+  "main": "gulpfile.js",
+  "scripts": {
+    "default": "gulp",
+    "build": "gulp build",
+    "serve": "gulp serve"
+  },
+  "repository": "git+https://github.com/SadDeploy/case__fly-v2.0.git",
+  "keywords": [
+    "framework",
+    "gulp",
+    "bower",
+    "pug",
+    "scss"
+  ],
+  "author": "SadDeploy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SadDeploy/case__fly-v2.0/issues"
+  },
+  "homepage": "https://github.com/SadDeploy/case__fly-v2.0/#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "babel-eslint": "^4.1.8",
+    "browser-sync": "^2.9.12",
+    "connect-modrewrite": "^0.8.5",
+    "del": "~2.0.2",
+    "eslint": "^1.4.3",
+    "eslint-config-airbnb": "0.0.9",
+    "gulp": "^3.9.1",
+    "gulp-babel": "~5.2.1",
+    "gulp-cache": "~0.3.0",
+    "gulp-clean-css": "^2.1.3",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-data": "^1.2.1",
+    "gulp-eslint": "~1.0.0",
+    "gulp-extend": "~0.2.0",
+    "gulp-filter": "~3.0.1",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-help": "^1.6.1",
+    "gulp-if": "~1.2.5",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-notify": "~2.2.0",
+    "gulp-plumber": "^1.0.2",
+    "gulp-postcss": "^6.0.1",
+    "gulp-pug": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "~2.0.4",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-size": "~2.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-svg-sprite": "^1.3.6",
+    "gulp-uglify": "^1.4.2",
+    "gulp-uncss": "^1.0.6",
+    "gulp-useref": "~1.3.0",
+    "gulp-util": "^3.0.8",
+    "map-stream": "0.0.6",
+    "node-notifier": "^4.6.1",
+    "node-sass": "3.4.2",
+    "pug": "^2.0.0-beta6",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.1.5",
+    "wiredep": "~2.2.2",
+    "yargs": "~3.24.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
+}

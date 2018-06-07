@@ -10,11 +10,15 @@
     font-size: 17px;
     opacity: 0;
     height: 50px;
-    transition: opacity 0.9s;
+    transition: opacity 0.5s;
 
     width: 35px;
     @media screen and (min-width: 1023px) {
-        width: 480px;
+        //width: 480px;
+    }
+    @media screen and (min-width: $screen-md) {
+        height: auto;
+        width: 460px;
     }
     @media screen and (min-width: $screen-lg) {
         position: relative;
@@ -59,12 +63,15 @@
     padding-right: 10px;
     padding-left: 10px;
     margin-right: -10px;
+    line-height: 1.1;
     @media screen and (min-width: $screen-md) {
         //line-height: 42px;
         margin-right: 0;
+        background: url('../images/icons/arrdown.png') no-repeat center right;
+    }
+    @media screen and (min-width: 1366px) {
         padding-right: 15px;
         padding-left: 15px;
-        background: url('../images/icons/arrdown.png') no-repeat center right;
     }
     &.hidden {
         display: none;
@@ -97,7 +104,7 @@
         text-align: right;
     }
     @media screen and (min-width: $screen-lg) {
-        width: 200%;
+        //width: 200%;
     }
     ul {
         text-align: left;
@@ -246,7 +253,7 @@
                 color: #2c2c2c;
                 font-size: 17px;
             }
-            @media screen and (min-width: $screen-lg) {
+            @media screen and (min-width: 1366px) {
                 padding: 0 15px;
             }
         } @else {

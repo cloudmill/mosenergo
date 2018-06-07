@@ -50,9 +50,11 @@ $(document).ready(function () {
         var availableSpace, numOfVisibleItems, requiredSpace;
 
         function check() {
-            availableSpace = $vlinks.width() - 10;
+            availableSpace = ($vlinks.width() - 10).toFixed(0);
+            console.log('availableSpace:' + availableSpace);
             numOfVisibleItems = $vlinks.children().length;
-            requiredSpace = breakWidths[numOfVisibleItems - 1];
+            requiredSpace = breakWidths[numOfVisibleItems - 1].toFixed(0);
+            console.log('requiredSpace:' + requiredSpace);
             if (requiredSpace > availableSpace) {
                 $vlinks.children().last().prependTo($hlink);
                 numOfVisibleItems -= 1;
@@ -66,29 +68,24 @@ $(document).ready(function () {
                 $btn.addClass('hidden');
             } else $btn.removeClass('hidden');
         }
-
-        $(window).resize(function () {
-            if (window.outerWidth <= 1365) {
-                setTimeout(function () {
-                    check();
-                }, 200);
-            }
-        });
-        $(window).on("orientationchange", function () {
+        function checkUpdate() {
             if (window.outerWidth <= 1365) {
                 setTimeout(function () {
                     check();
                 }, 500);
             }
-        });
-        if (window.outerWidth <= 1365) {
-            setTimeout(function () {
-                check();
-            }, 500);
         }
+        $(window).resize(function () {
+            checkUpdate();
+        });
+        $(window).on("orientationchange", function () {
+            checkUpdate();
+        });
+        checkUpdate();
+
         setTimeout(function () {
             $('.greedy').css('opacity', '1');
-        }, 200);
+        }, 700);
         $btn.on('click', function () {
             $hlinks.toggleClass('hidden');
             if ($(window).width() < 768) {
@@ -191,17 +188,22 @@ $(document).ready(function () {
     });
     var swiperFull = new Swiper('.swiper-full', {
         slidesPerView: 2,
-        // centeredSlides: true,
-        // spaceBetween: 10,
         loop: true,
         pagination: {
             el: '.swiper-paginationf',
             clickable: true
+        }
+    });
+    var swiperFullMob = new Swiper('.swiper-fullmob', {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: '.swiper-paginationfl',
+            type: 'fraction'
         },
-        breakpoints: {
-            767: {
-                slidesPerView: 1
-            }
+        navigation: {
+            nextEl: '.swiper-buttonfl-next',
+            prevEl: '.swiper-buttonfl-prev'
         }
     });
     var swiperSl = new Swiper('.swiper-sl', {
@@ -364,9 +366,8 @@ $(document).ready(function () {
                 swiperNw.update();
                 swiperFl.update();
                 swiperDir.update();
-                // galleryTop.update();
-                // galleryThumbs.update();
                 swiperFull.update();
+                swiperFullMob.update();
             }, 100);
         }
     });
@@ -378,21 +379,31 @@ $(document).ready(function () {
     });
     //fullpage
 
-    $(window).resize(function () {
+    function swiperUpdates() {
         setTimeout(function () {
-            swiperNw.update();
-            swiperFl.update();
-            swiperDir.update();
-            swiperFull.update();
+            if ($('.swiper-nw').length) {
+                swiperNw.update();
+            }
+            if ($('.swiper-fl').length) {
+                swiperFl.update();
+            }
+            if ($('.swiper-dir').length) {
+                swiperDir.update();
+            }
+            if ($('.swiper-full').length) {
+                swiperFull.update();
+            }
+            if ($('.swiper-fullmob').length) {
+                swiperFullMob.update();
+            }
         }, 500);
+    }
+
+    $(window).resize(function () {
+        swiperUpdates();
     });
     $(window).on("orientationchange", function () {
-        setTimeout(function () {
-            swiperNw.update();
-            swiperFl.update();
-            swiperDir.update();
-            swiperFull.update();
-        }, 500);
+        swiperUpdates();
     });
 });
 

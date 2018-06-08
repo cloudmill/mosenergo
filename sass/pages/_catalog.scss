@@ -111,6 +111,34 @@
             top: 0;bottom: 0;
         }
     }
+    &-main {
+        .media-catalog {
+            flex-wrap: wrap !important;
+        }
+        .media-catalog-inner--f {
+            @extend .is-col__xs-12;
+            @extend .is-col__md-6;
+        }
+        .catalog__item-img {
+            height: 100%;
+            max-height: inherit;
+            @media screen and (min-width: $screen-md) {
+                min-height: 150px;
+                img {
+                    height: 100%;
+                }
+            }
+            @media screen and (min-width: $screen-lg) {
+                min-height: 230px;
+                img {
+                    height: auto;
+                }
+            }
+            @media screen and (min-width: $screen-xl) {
+                min-height: 310px;
+            }
+        }
+    }
 }
 
 .tumb {

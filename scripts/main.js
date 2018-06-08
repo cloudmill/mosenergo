@@ -50,10 +50,10 @@ $(document).ready(function () {
         var availableSpace, numOfVisibleItems, requiredSpace;
 
         function check() {
-            availableSpace = ($vlinks.width() - 10).toFixed(0);
+            availableSpace = Math.round($vlinks.width() - 10);
             console.log('availableSpace:' + availableSpace);
             numOfVisibleItems = $vlinks.children().length;
-            requiredSpace = breakWidths[numOfVisibleItems - 1].toFixed(0);
+            requiredSpace = Math.round(breakWidths[numOfVisibleItems - 1]);
             console.log('requiredSpace:' + requiredSpace);
             if (requiredSpace > availableSpace) {
                 $vlinks.children().last().prependTo($hlink);

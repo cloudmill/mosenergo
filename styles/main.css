@@ -3271,7 +3271,7 @@ blockquote {
 .is-col__xs-11 {
   width: 91.66667%; }
 
-.is-col__xs-12, .media-catalog-inner--f, .directions-catalog-inner--f, .info-mainimg, .info-num, .hr-main__item, .press__item, .contacts-main__item, .sert-main__item {
+.is-col__xs-12, .media-catalog-inner--f, .media-main .media-catalog-inner--f, .directions-catalog-inner--f, .info-mainimg, .info-num, .hr-main__item, .press__item, .contacts-main__item, .sert-main__item {
   width: 100%; }
 
 .start__xs {
@@ -3473,7 +3473,7 @@ blockquote {
     width: 33.33333%; }
   .is-col__md-5, .fullhistory .info-num {
     width: 41.66667%; }
-  .is-col__md-6, .directions-catalog-inner--f, .info-num, .hr-main__item, .press__item, .contacts-main__item, .sert-main__item {
+  .is-col__md-6, .media-main .media-catalog-inner--f, .directions-catalog-inner--f, .info-num, .hr-main__item, .press__item, .contacts-main__item, .sert-main__item {
     width: 50%; }
   .is-col__md-7 {
     width: 58.33333%; }
@@ -5032,6 +5032,28 @@ i + span {
     top: 0;
     bottom: 0; }
 
+.media-main .media-catalog {
+  -webkit-flex-wrap: wrap !important;
+      -ms-flex-wrap: wrap !important;
+          flex-wrap: wrap !important; }
+
+.media-main .catalog__item-img {
+  height: 100%;
+  max-height: inherit; }
+  @media screen and (min-width: 768px) {
+    .media-main .catalog__item-img {
+      min-height: 150px; }
+      .media-main .catalog__item-img img {
+        height: 100%; } }
+  @media screen and (min-width: 1025px) {
+    .media-main .catalog__item-img {
+      min-height: 230px; }
+      .media-main .catalog__item-img img {
+        height: auto; } }
+  @media screen and (min-width: 1860px) {
+    .media-main .catalog__item-img {
+      min-height: 310px; } }
+
 .tumb .swiper-slide {
   height: 230px; }
   @media screen and (min-width: 1025px) {
@@ -5777,11 +5799,13 @@ i + span {
     .fullpage .linkto {
       font-size: 20px;
       display: inline-block;
-      text-align: left;
-      right: auto;
-      left: 0; } }
+      text-align: left; } }
   .fullpage .linkto--w {
     color: #fff !important; }
+    @media screen and (min-width: 768px) {
+      .fullpage .linkto--w {
+        right: auto;
+        left: 0; } }
   .fullpage .linkto img {
     display: none; }
     @media screen and (min-width: 768px) {

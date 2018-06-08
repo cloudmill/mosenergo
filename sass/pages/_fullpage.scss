@@ -195,11 +195,13 @@
             font-size: 20px;
             display: inline-block;
             text-align: left;
-            right: auto;
-            left: 0;
         }
         &--w {
             color: $white-lighten !important;
+            @media screen and (min-width: $screen-md) {
+                right: auto;
+                left: 0;
+            }
         }
         img {
             display: none;

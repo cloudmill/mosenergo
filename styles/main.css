@@ -3843,13 +3843,17 @@ blockquote {
 .overflow-main {
   position: fixed;
   padding-top: 70px;
-  top: 0;
-  bottom: 0;
+  top: 0px;
+  bottom: 0px;
   left: 0;
+  width: 100%;
+  height: 100%;
   right: 0;
   z-index: 99;
+  background-color: #0763a2;
   overflow-y: auto;
-  background-color: #0763a2; }
+  -webkit-overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
   @media screen and (min-width: 768px) {
     .overflow-main {
       position: absolute;
@@ -4509,7 +4513,7 @@ aside {
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
   background-color: #ffffff;
   position: relative;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   z-index: 11; }
@@ -4519,7 +4523,8 @@ aside {
       -webkit-box-shadow: none;
          -moz-box-shadow: none;
               box-shadow: none;
-      background-color: transparent; } }
+      background-color: transparent;
+      position: absolute; } }
   @media screen and (min-width: 1860px) {
     .page-header {
       padding: 40px 0 0; } }
@@ -5750,9 +5755,6 @@ i + span {
   .fullpage-slider p {
     font-size: 16px;
     margin-bottom: 40px; }
-    @media screen and (min-width: 480px) {
-      .fullpage-slider p {
-        font-size: 22px; } }
     @media screen and (min-width: 768px) {
       .fullpage-slider p {
         font-size: 30px;
@@ -5772,7 +5774,7 @@ i + span {
     font-family: "ProximaBold", serif;
     height: 50px;
     padding: 13px 20px; }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 768px) {
       .fullpage-slider .btn {
         padding: 17px 40px;
         height: 60px;
@@ -6177,6 +6179,10 @@ i + span {
 #section0 {
   color: #fff;
   background: url("../images/section-1.jpg") no-repeat center/cover; }
+
+@media screen and (max-width: 767px) {
+  .intro {
+    overflow: hidden; } }
 
 @media screen and (min-width: 480px) {
   #section1 {

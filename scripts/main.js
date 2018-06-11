@@ -358,7 +358,7 @@ $(document).ready(function () {
         navigation: true,
         // autoScrolling: false,
         navigationPosition: 'left',
-        // responsiveWidth: 1025,
+        responsiveWidth: 1025,
         navigationTooltips: ['Главная', 'История', 'Направления деятельности', 'Новости', 'Партнеры'],
         afterRender: function afterRender() {
             $('#fp-nav').append('<span class="arrow arrowUp"></span><span class="arrow arrowDown"></span>');

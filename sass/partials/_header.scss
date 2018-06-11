@@ -9,7 +9,7 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
     background-color: #ffffff;
     position: relative;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     z-index: 11;
@@ -17,6 +17,7 @@
         padding: 30px 0 0;
         box-shadow: none;
         background-color: transparent;
+        position: absolute;
     }
     @media screen and (min-width: $screen-xl-min) {
         padding: 40px 0 0;

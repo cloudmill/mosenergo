@@ -141,7 +141,7 @@
             font-size: 16px;
             margin-bottom: 40px;
             @media screen and (min-width: $screen-sm) {
-                font-size: 22px;
+                //font-size: 22px;
             }
             @media screen and (min-width: $screen-md) {
                 font-size: 30px;
@@ -164,7 +164,7 @@
             font-family: $base-font-family-bold;
             height: 50px;
             padding: 13px 20px;
-            @media screen and (min-width: $screen-sm) {
+            @media screen and (min-width: $screen-md) {
                 padding: 17px 40px;
                 height: 60px;
                 font-size: 17px;
@@ -618,7 +618,11 @@
     color: $white-lighten;
     background: url("../images/section-1.jpg") no-repeat center / cover;
 }
-
+.intro {
+    @media screen and (max-width: $screen-sm-max) {
+        overflow: hidden;
+    }
+}
 #section1 {
     @media screen and (min-width: $screen-sm) {
         padding: 30px 0;

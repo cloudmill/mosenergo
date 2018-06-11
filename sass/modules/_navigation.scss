@@ -81,13 +81,17 @@
 .overflow-main {
     position: fixed;
     padding-top: 70px;
-    top: 0;
-    bottom: 0;
+    top: 0px;
+    bottom: 0px;
     left: 0;
+    width: 100%;
+    height: 100%;
     right: 0;
     z-index: 99;
-    overflow-y: auto;
     background-color: #0763a2;
+    overflow-y: auto;
+    -webkit-overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     @media screen and (min-width: $screen-md) {
         position: absolute;
         background-color: transparent;

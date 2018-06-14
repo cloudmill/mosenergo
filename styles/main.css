@@ -4348,14 +4348,20 @@ aside {
   font-size: 10px;
   margin-bottom: 20px;
   overflow-x: auto;
-  position: fixed;
-  top: 0;
+  top: 50px;
   left: 0;
   right: 0;
-  z-index: 9; }
-  @media screen and (min-width: 768px) {
-    .aside-menu {
-      position: static; } }
+  z-index: 9;
+  position: static;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .aside-menu.fixed {
+    position: fixed; }
+    @media screen and (min-width: 768px) {
+      .aside-menu.fixed {
+        position: static; } }
   .aside-menu li {
     width: 33%;
     height: 50px;

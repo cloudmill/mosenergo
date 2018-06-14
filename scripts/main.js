@@ -25,6 +25,14 @@ if ($('#back-to-top').length) {
 }
 //scroll to top
 
+$(window).scroll(function () {
+    if ($(window).scrollTop() >= 150) {
+        $('.aside-menu').addClass('fixed');
+    } else {
+        $('.aside-menu').removeClass('fixed');
+    }
+});
+
 // ready
 $(document).ready(function () {
     //tabs

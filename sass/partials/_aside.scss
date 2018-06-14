@@ -43,13 +43,17 @@ aside {
     font-size: 10px;
     margin-bottom: 20px;
     overflow-x: auto;
-    position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     right: 0;
     z-index: 9;
-    @media screen and (min-width: $screen-md) {
-        position: static;
+    position: static;
+    @include transition();
+    &.fixed {
+        position: fixed;
+        @media screen and (min-width: $screen-md) {
+            position: static;
+        }
     }
     li {
         width: 33%;

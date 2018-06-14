@@ -209,6 +209,7 @@
             left: 15px;
             right: 10px;
             text-transform: uppercase;
+            z-index: 10;
             @media screen and (min-width: $screen-lg) {
                 top: 20px;
                 left: 20px;
@@ -268,6 +269,7 @@
             text-transform: uppercase;
             font-family: $base-font-family-bold;
             border-radius: 11px;
+            z-index: 10;
             @media screen and (min-width: $screen-md) {
                 padding: 2px 6px;
             }
@@ -305,6 +307,7 @@
             bottom: 15px;
             left: 15px;
             right: 10px;
+            z-index: 10;
             @media screen and (min-width: $screen-lg) {
                 bottom: 20px;
                 left: 20px;

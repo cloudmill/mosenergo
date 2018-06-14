@@ -914,6 +914,9 @@ $items:
         width: 20px;
         height: 240px;
         margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         @media screen and (min-width: $screen-md-min) {
             right: 50px;
             height: 460px;

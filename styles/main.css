@@ -2319,7 +2319,24 @@
     z-index: 11;
     width: 20px;
     height: 240px;
-    margin: auto; }
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     @media screen and (min-width: 768px) {
       .white-popup .swiper-cust {
         right: 50px;
@@ -5132,7 +5149,8 @@ i + span {
       top: 15px;
       left: 15px;
       right: 10px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      z-index: 10; }
       @media screen and (min-width: 1025px) {
         .catalog__item-date {
           top: 20px;
@@ -5191,7 +5209,8 @@ i + span {
       text-transform: uppercase;
       font-family: "ProximaBold", serif;
       -moz-border-radius: 11px;
-           border-radius: 11px; }
+           border-radius: 11px;
+      z-index: 10; }
       @media screen and (min-width: 768px) {
         .catalog__item-label {
           padding: 2px 6px; } }
@@ -5221,7 +5240,8 @@ i + span {
       position: absolute;
       bottom: 15px;
       left: 15px;
-      right: 10px; }
+      right: 10px;
+      z-index: 10; }
       @media screen and (min-width: 1025px) {
         .catalog__item-desc {
           bottom: 20px;

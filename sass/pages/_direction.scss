@@ -25,6 +25,7 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
+    z-index: 12;
     @media screen and (min-width: $screen-xl) {
         bottom: 50px;
         right: 50px;

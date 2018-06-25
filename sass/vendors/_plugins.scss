@@ -315,11 +315,11 @@ $items:
 .swiper {
     position: relative;
 }
-.slider__item {
+.slider__item,
+.slider__item-history {
     width: 100%;
     position: relative;
     margin-bottom: 20px;
-    overflow: hidden;
     @media screen and (min-width: $screen-md) {
         margin-bottom: 50px;
     }
@@ -366,15 +366,30 @@ $items:
             opacity: 1;
         }
     }
+}
+.slider__item {
+    overflow: hidden;
+    color: $white-lighten;
+    .slider__item-img {
+        &::before {
+            content: '';
+            z-index: 9;
+            position: absolute;
+            top: 0;left: 0;right: 0;bottom: 0;
+            background: rgba(0, 0, 0, 0.25);
+            @media screen and (min-width: $screen-xl) {
+                background: rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+    .slider__item-title,
+    .slider__item-label {
+        z-index: 10;
+    }
     &:focus,
     &:hover {
-        color: $white-lighten;
         .slider__item-img {
             &::before {
-                content: '';
-                z-index: 9;
-                position: absolute;
-                top: 0;left: 0;right: 0;bottom: 0;
                 background: url('../images/plus-wh.svg') no-repeat center / auto 50%;
                 @media screen and (min-width: $screen-xl) {
                     background: url('../images/plus-wh.svg') no-repeat center;

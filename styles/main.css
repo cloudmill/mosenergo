@@ -1670,28 +1670,34 @@
 .swiper {
   position: relative; }
 
-.slider__item {
+.slider__item,
+.slider__item-history {
   width: 100%;
   position: relative;
-  margin-bottom: 20px;
-  overflow: hidden; }
+  margin-bottom: 20px; }
   @media screen and (min-width: 768px) {
-    .slider__item {
+    .slider__item,
+    .slider__item-history {
       margin-bottom: 50px; } }
-  .slider__item-img {
+  .slider__item-img,
+  .slider__item-history-img {
     text-align: center;
     overflow: hidden; }
-    .slider__item-img img {
+    .slider__item-img img,
+    .slider__item-history-img img {
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
   @media screen and (min-width: 768px) {
-    .slider__item {
+    .slider__item,
+    .slider__item-history {
       width: 318px; } }
-  .slider__item p {
+  .slider__item p,
+  .slider__item-history p {
     color: #6a6a6a; }
-  .slider__item-year {
+  .slider__item-year,
+  .slider__item-history-year {
     font-size: 34px;
     -webkit-transform: rotate(-90deg);
        -moz-transform: rotate(-90deg);
@@ -1708,9 +1714,11 @@
     transition: all 0.3s ease;
     display: none; }
     @media screen and (min-width: 768px) {
-      .slider__item-year {
+      .slider__item-year,
+      .slider__item-history-year {
         display: block; } }
-    .slider__item-year::after {
+    .slider__item-year::after,
+    .slider__item-history-year::after {
       content: '';
       height: 1px;
       width: 310px;
@@ -1721,30 +1729,42 @@
       right: 120%;
       margin: auto; }
       @media screen and (min-width: 1860px) {
-        .slider__item-year::after {
+        .slider__item-year::after,
+        .slider__item-history-year::after {
           width: 315px; } }
-    .swiper-slide-active .slider__item-year {
+    .swiper-slide-active .slider__item-year, .swiper-slide-active
+    .slider__item-history-year {
       opacity: 1; }
-  .slider__item:focus, .slider__item:hover {
-    color: #fff; }
-    .slider__item:focus .slider__item-img::before, .slider__item:hover .slider__item-img::before {
-      content: '';
-      z-index: 9;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("../images/plus-wh.svg") no-repeat center/auto 50%; }
-      @media screen and (min-width: 1860px) {
-        .slider__item:focus .slider__item-img::before, .slider__item:hover .slider__item-img::before {
-          background: url("../images/plus-wh.svg") no-repeat center; } }
-    .slider__item:focus img, .slider__item:hover img {
-      -webkit-transform: scale(1.1);
-         -moz-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-           -o-transform: scale(1.1);
-              transform: scale(1.1); }
+
+.slider__item {
+  overflow: hidden;
+  color: #fff; }
+  .slider__item .slider__item-img::before {
+    content: '';
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.25); }
+    @media screen and (min-width: 1860px) {
+      .slider__item .slider__item-img::before {
+        background: rgba(0, 0, 0, 0.25); } }
+  .slider__item .slider__item-title,
+  .slider__item .slider__item-label {
+    z-index: 10; }
+  .slider__item:focus .slider__item-img::before, .slider__item:hover .slider__item-img::before {
+    background: url("../images/plus-wh.svg") no-repeat center/auto 50%; }
+    @media screen and (min-width: 1860px) {
+      .slider__item:focus .slider__item-img::before, .slider__item:hover .slider__item-img::before {
+        background: url("../images/plus-wh.svg") no-repeat center; } }
+  .slider__item:focus img, .slider__item:hover img {
+    -webkit-transform: scale(1.1);
+       -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+         -o-transform: scale(1.1);
+            transform: scale(1.1); }
 
 .swiper-custom {
   height: 40px;
@@ -4548,9 +4568,6 @@ aside {
               box-shadow: none;
       background-color: transparent;
       position: absolute; } }
-  @media screen and (min-width: 1860px) {
-    .page-header {
-      padding: 40px 0 0; } }
   .page-header__logo {
     position: relative; }
     .page-header__logo a {
@@ -4588,6 +4605,8 @@ aside {
          -moz-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+      .page-header__lang ul li {
+        padding-right: 0; }
     .page-header__lang a {
       color: #2c2c2c; }
     .page-header__lang .active {
@@ -5447,7 +5466,8 @@ i + span {
 .scrollto {
   position: absolute;
   bottom: 20px;
-  right: 20px; }
+  right: 20px;
+  z-index: 12; }
   @media screen and (min-width: 1860px) {
     .scrollto {
       bottom: 50px;
@@ -5765,7 +5785,7 @@ i + span {
       bottom: 26%; } }
 
 .fullpage-slider {
-  padding: 67px 0 0; }
+  height: 100%; }
   .fullpage-slider h1 {
     font-size: 32px; }
     @media screen and (min-width: 480px) {
@@ -6204,7 +6224,7 @@ i + span {
 
 #section0 {
   color: #fff;
-  background: url("../images/section-1.jpg") no-repeat center/cover; }
+  background-color: #0a0a0b; }
 
 @media screen and (max-width: 767px) {
   .intro {
@@ -6284,6 +6304,33 @@ i + span {
       -ms-transform: translateY(0);
        -o-transform: translateY(0);
           transform: translateY(0); }
+
+.fullpage-slider-img {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.fullpage-slider .intro {
+  padding-top: 30vh; }
+
+.fullpage-slider .swiper-credit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 23vh; }
+  .fullpage-slider .swiper-credit .swiper-button,
+  .fullpage-slider .swiper-credit .swiper-pagination {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: auto;
+    bottom: auto; }
+  .fullpage-slider .swiper-credit .swiper-button {
+    right: 0; }
+    .fullpage-slider .swiper-credit .swiper-button::after {
+      z-index: 9; }
+  .fullpage-slider .swiper-credit .swiper-pagination {
+    left: 0; }
 
 .fullhistory .more {
   font-size: 14px;
@@ -7102,6 +7149,8 @@ div.hr-main__item {
       .news-one .main-title .catalog__item-label {
         bottom: auto;
         top: 10px; } }
+  .news-one .main-title .inner-title {
+    width: 90%; }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .news-one .catalog__item:last-child {

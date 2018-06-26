@@ -18,7 +18,7 @@
     }
     @media screen and (min-width: $screen-md) {
         height: auto;
-        width: 460px;
+        width: 470px;
     }
     @media screen and (min-width: $screen-lg) {
         position: relative;
@@ -43,7 +43,7 @@
 }
 
 .overflow {
-    background-color: #0763a2;
+    background-color: #6d98cf;
     .sub-nav {
         left: auto;
         right: 0;
@@ -115,6 +115,13 @@
     }
     &.hidden {
         display: none;
+    }
+    .main-nav__link {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        &:hover {
+            background-color: #6085b5;
+        }
     }
 }
 
@@ -221,7 +228,7 @@
             @media screen and (min-width: $screen-md) {
                 margin: 0;
             }
-            @media screen and (min-width: $screen-lg) {
+            @media screen and (min-width: $screen-xl) {
                 display: inline-block;
             }
         } @else {

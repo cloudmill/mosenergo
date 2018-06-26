@@ -17,6 +17,9 @@
         _:-ms-fullscreen, :root .catalog__item-img img {
             width: 100%;
         }
+        _:-ms-fullscreen, :root .white-popup .swiper-pop img {
+            height: auto;
+        }
 
     }
 //}

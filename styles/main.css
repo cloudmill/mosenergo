@@ -3849,7 +3849,7 @@ blockquote {
       position: relative; }
 
 .overflow {
-  background-color: #6d98cf; }
+  background-color: #6d98cf;     border-radius: 6px;}
   .overflow .sub-nav {
     left: auto;
     right: 0; }
@@ -3898,7 +3898,7 @@ blockquote {
       padding-top: 0;
       left: auto;
       right: -5px;
-      top: 90%;
+      top: 100%;
       bottom: auto;
       display: block;
       overflow-y: visible; } }

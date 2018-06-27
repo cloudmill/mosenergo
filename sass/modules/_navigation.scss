@@ -13,12 +13,12 @@
     transition: opacity 0.5s;
 
     width: 35px;
-    @media screen and (min-width: 1023px) {
-        //width: 480px;
-    }
     @media screen and (min-width: $screen-md) {
         height: auto;
         width: 470px;
+    }
+    @media screen and (min-width: 1023px) {
+        width: 530px;
     }
     @media screen and (min-width: $screen-lg) {
         position: relative;
@@ -43,10 +43,14 @@
 }
 
 .overflow {
-    background-color: #6d98cf;
+    border-radius: 6px;
+    @media screen and (min-width: $screen-md) {
+        background-color: #6d98cf;
+    }
     .sub-nav {
         left: auto;
-        right: 0;
+        right: 100%;
+        top: 0;
     }
     a {
         color: $white-lighten !important;
@@ -64,6 +68,7 @@
     padding-left: 10px;
     margin-right: -10px;
     line-height: 1.1;
+    font-size: 16px;
     @media screen and (min-width: $screen-md) {
         //line-height: 42px;
         margin-right: 0;
@@ -72,17 +77,22 @@
     @media screen and (min-width: 1366px) {
         padding-right: 15px;
         padding-left: 15px;
+        font-size: 17px;
     }
     &.hidden {
         display: none;
     }
 }
-
+.overflow-parent {
+    &:hover .overflow-main {
+        display: block;
+    }
+}
 .overflow-main {
     position: fixed;
     padding-top: 70px;
-    top: 0px;
-    bottom: 0px;
+    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -98,9 +108,9 @@
         padding-top: 0;
         left: auto;
         right: -5px;
-        top: 90%;
+        top: 100%;
         bottom: auto;
-        display: block;
+        display: none;
         overflow-y: visible;
     }
     @media screen and (min-width: $screen-md) {
@@ -262,10 +272,11 @@
                 padding: 2px 10px;
                 background-color: transparent;
                 color: #2c2c2c;
-                font-size: 17px;
+                font-size: 16px;
             }
             @media screen and (min-width: 1366px) {
                 padding: 0 15px;
+                font-size: 17px;
             }
         } @else {
             background-color: transparent;

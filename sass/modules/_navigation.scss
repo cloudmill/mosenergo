@@ -44,6 +44,8 @@
 
 .overflow {
     border-radius: 6px;
+    overflow: hidden;
+    font-family: 'ProximaSemi';
     @media screen and (min-width: $screen-md) {
         background-color: #6d98cf;
     }
@@ -183,7 +185,7 @@
         display: block;
         a:hover {
             color: $white-lighten;
-            font-family: $base-font-family-bold;
+            //font-family: $base-font-family-bold;
             background-color: #6085b5;
         }
     }

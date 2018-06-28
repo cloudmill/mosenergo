@@ -62,6 +62,11 @@
             &--f {
                 //@extend .is-col__md-6;
                 @extend .is-col__xs-12;
+                .is-col__md-6 {
+                    @media screen and (min-width: $screen-md) {
+                        height: 50%;
+                    }
+                }
                 &.fullhistory-slider {
                     @media screen and (min-width: $screen-md) {
                         padding-bottom: 0;

@@ -3853,7 +3853,9 @@ blockquote {
 
 .overflow {
   -moz-border-radius: 6px;
-       border-radius: 6px; }
+       border-radius: 6px;
+  overflow: hidden;
+  font-family: 'ProximaSemi'; }
   @media screen and (min-width: 768px) {
     .overflow {
       background-color: #6d98cf; } }
@@ -3973,7 +3975,6 @@ blockquote {
     display: block; }
     .sub-nav li a:hover {
       color: #fff;
-      font-family: "ProximaBold", serif;
       background-color: #6085b5; }
   .sub-nav a {
     color: #fff;
@@ -5055,6 +5056,9 @@ i + span {
           flex-wrap: wrap; }
   .media-catalog-inner .catalog__item {
     margin-bottom: 0; }
+  @media screen and (min-width: 768px) {
+    .media-catalog-inner--f .is-col__md-6, .media-catalog-inner--f .media-main .media-catalog-inner--f, .media-main .media-catalog-inner--f .media-catalog-inner--f, .media-catalog-inner--f .directions-catalog-inner--f, .media-catalog-inner--f .info-num, .media-catalog-inner--f .hr-main__item, .media-catalog-inner--f .press__item, .media-catalog-inner--f .contacts-main__item, .media-catalog-inner--f .sert-main__item {
+      height: 50%; } }
   @media screen and (min-width: 768px) {
     .media-catalog-inner--f.fullhistory-slider {
       padding-bottom: 0; } }
